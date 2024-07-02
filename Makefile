@@ -43,7 +43,7 @@ $(NAME): $(OBJS)
 clean:
 	$(RM) $(OBJS)
 
-# Rule to cleabn object files and the library 
+# Rule to clean object files and the library 
 fclean: clean
 	$(RM) $(NAME)
 

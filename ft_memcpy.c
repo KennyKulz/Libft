@@ -34,10 +34,6 @@ void	*memcpy(void *dest, const void *src, size_t n)
 	if (n == 0)
 		return (dest);
 	
-	// If n is , no need to copy anything, just return dest.
-	if (n == 0)
-		return (dest);
-	
 	// Cast destination and source pointers to unsigned char pointers.
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;

@@ -1,4 +1,6 @@
-# Libft Introduction
+# Libft 
+
+## Introduction
 
 Libft (Library of Functions)
 

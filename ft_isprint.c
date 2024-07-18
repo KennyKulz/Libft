@@ -5,18 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kchikwam <kchikwam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/29 22:08:26 by kchikwam          #+#    #+#             */
-/*   Updated: 2024/06/29 22:08:26 by kchikwam         ###   ########.fr       */
+/*   Created: 2024/06/11 15:21:21 by kchikwam          #+#    #+#             */
+/*   Updated: 2024/06/27 13:08:43 by kchikwam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-	// Check if c is between space (' ') and tilde ('~')
-	if (c >= ' ' && c <= '~')
-		return (1); // Return 1 if c is a printable character
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
 	else
-		return (0); // Return 0 if c is not a printable character
+	{
+		return (0);
+	}
 }

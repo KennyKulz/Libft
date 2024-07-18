@@ -5,24 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kchikwam <kchikwam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/01 17:18:14 by kchikwam          #+#    #+#             */
-/*   Updated: 2024/07/01 17:18:14 by kchikwam         ###   ########.fr       */
+/*   Created: 2024/06/11 15:38:50 by kchikwam          #+#    #+#             */
+/*   Updated: 2024/06/27 13:12:37 by kchikwam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// The function calculates the length of a string.
-// This function iterates through the string until the null-terminator is 
-// encountered, counting the number of characters in the string.
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(const char *str)
 {
-	size_t	length;
+	size_t	i;
 
-	length = 0;
-	while (s[length] != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		length++;
+		i++;
 	}
-	return (length); // Return: The length of the string.
+	return (i);
 }

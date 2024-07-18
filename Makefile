@@ -5,50 +5,36 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kchikwam <kchikwam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/06/28 20:19:30 by kchikwam          #+#    #+#              #
-#    Updated: 2024/06/28 20:19:30 by kchikwam         ###   ########.fr        #
+#    Created: 2024/06/09 15:54:24 by kchikwam          #+#    #+#              #
+#    Updated: 2024/07/11 15:59:27 by kchikwam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# List of source files
-SRCS		=	ft_isalnum.Created
+SRCS        =    ft_isalnum.c ft_isprint.c ft_putchar_fd.c ft_strtrim.c ft_itoa.c\
+					ft_strlcat.c ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c \
+					ft_memcpy.c ft_putendl_fd.c ft_strchr.c  ft_strlcpy.c \
+					ft_strnstr.c ft_tolower.c ft_bzero.c ft_isascii.c ft_memset.c \
+					ft_memmove.c ft_putnbr_fd.c ft_strdup.c  ft_strlen.c ft_strrchr.c \
+					ft_toupper.c ft_calloc.c ft_isdigit.c ft_memchr.c ft_split.c \
+					ft_putstr_fd.c ft_strjoin.c ft_strmapi.c ft_striteri.c ft_memcmp.c 
+OBJS        =    $(SRCS:.c=.o)
+CC          =    cc
+RM          =    rm -f
+CFLAGS      =    -Wall -Werror -Wextra
+NAME        =    libft.a
 
-# Generate the list of object files from the source files
-OBJS		:=	$(SRCS:.c=.o)
-
-# Compiler to be used
-CC			=	CC
-
-# Command to remove files
-RM			=	rm -fr
-
-# Cmmand to remove files
-CFLAGS		=	-Wall -Werror -Wextra -I.
-
-# Name of the output library
-NAME		=	libft.a
-
-# Default target: build the library
 all: $(NAME)
 
-# Rule to create library from source files
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
+	ranlib $(NAME)
 
-# Rule to create object files from source files
-%.o: %.c
-	$(cc) $(CFLAGS) -c $< -o $@
-
-# Rule to clean object files
 clean:
 	$(RM) $(OBJS)
 
-# Rule to clean object files and the library 
 fclean: clean
 	$(RM) $(NAME)
 
-# Rule to force recomplilation
 re: fclean $(NAME)
 
-# Mark targets that do not represent files
 .PHONY: all clean fclean re

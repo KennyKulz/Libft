@@ -5,22 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kchikwam <kchikwam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/29 21:20:03 by kchikwam          #+#    #+#             */
-/*   Updated: 2024/06/29 21:20:03 by kchikwam         ###   ########.fr       */
+/*   Created: 2024/06/10 20:00:05 by kchikwam          #+#    #+#             */
+/*   Updated: 2024/06/27 13:08:37 by kchikwam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Checks if the given character is a digit.
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
+	if ((c >= '0' && c <= '9'))
 	{
-		return (1); // Return 1 if c is a digit 
+		return (1);
 	}
 	else
 	{
-		return (0); // Return 0 if c is not a digit
+		return (0);
 	}
 }
